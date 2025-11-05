@@ -5,6 +5,7 @@ public class Broken {
 
     public String surname;
     public static final String NEWVALUE = "";
+    int number = 1;
 
     void echo() { }
 
