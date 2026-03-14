@@ -50,11 +50,10 @@ public class Tracker {
         int index = indexOf(id);
         boolean result = index != -1;
         if (result) {
-            items[index].setName(item.getName());
+            items[index] = item;
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public void delete(int id) {

@@ -70,6 +70,7 @@ public class TrackerTest {
         int id = item.getId();
         Item updateItem = new Item("Bug with description");
         tracker.replace(id, updateItem);
+        id = updateItem.getId();
         assertThat(tracker.findById(id).getName()).isEqualTo("Bug with description");
     }
 
