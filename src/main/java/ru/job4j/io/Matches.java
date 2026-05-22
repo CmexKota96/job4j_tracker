@@ -16,8 +16,6 @@ public class Matches {
                 count -= matches;
                 System.out.println("Кол-во оставшихся спичек - " + count);
                 turn = !turn;
-            } else if (count == 0) {
-                break;
             } else {
                 System.out.println("Необходимо ввести число от 1 до 3 и не больше оставшихся спичек на столе, пожалуйста повторите попытку:");
             }
