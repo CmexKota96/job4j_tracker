@@ -1,6 +1,6 @@
 package ru.job4j.cast;
 
-public class train implements Vehicle {
+public class Train implements Vehicle {
     @Override
     public void move() {
         System.out.println(getClass().getSimpleName() + " Поезд движется со скоростью 120км/ч");
