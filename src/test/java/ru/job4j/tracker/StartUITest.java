@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class StartUITest {
     @Test
     void whenAddItem() {
-        String[] answers = {"Fix PC"};
+        String[] answers = {"Fix PC2"};
         Input input = new MockInput(answers);
         Tracker tracker = new Tracker();
         StartUI.createItem(input, tracker);
