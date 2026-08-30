@@ -4,7 +4,7 @@ public class MockInput implements Input {
     private String[] answers;
     private int position = 0;
 
-    public MockInput(String[] answer) {
+    public MockInput(String[] answers) {
         this.answers = answers;
     }
 
