@@ -15,7 +15,10 @@ class StartUITest {
                 new ExitAction()
         };
         new StartUI().init(input, tracker, actions);
-        assertThat(tracker.findAll()[0].getName()).isEqualTo("Item name");
+        var res = tracker.findAll();
+        String[] expected = {"1", "Item name"};
+        assertThat(tracker.findAll()[0].getId()).isEqualTo(Integer.valueOf(expected[0]));
+        assertThat(tracker.findAll()[0].getName()).isEqualTo(expected[1]);
     }
 
     @Test
