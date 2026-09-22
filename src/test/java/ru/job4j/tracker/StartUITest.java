@@ -1,5 +1,6 @@
 package ru.job4j.tracker;
 
+import org.assertj.core.error.ShouldNotBeNull;
 import org.junit.jupiter.api.Test;
 import ru.job4j.tracker.action.*;
 import ru.job4j.tracker.input.Input;
@@ -23,9 +24,10 @@ class StartUITest {
                 new ExitAction(output)
         };
         new StartUI(output).init(input, tracker, actions);
-        String[] expected = {"1", "Item name"};
-        assertThat(tracker.findAll()[0].getId()).isEqualTo(Integer.valueOf(expected[0]));
-        assertThat(tracker.findAll()[0].getName()).isEqualTo(expected[1]);
+        //String[] expected = {"1", "Item name"};
+        var expected = new Item[1];
+        expected[0] = new Item(1, "Item name");
+        assertThat(tracker.findAll()).usingRecursiveComparison().ignoringFields("created").isEqualTo(expected);
     }
 
     @Test
