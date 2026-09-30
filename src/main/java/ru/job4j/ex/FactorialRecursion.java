@@ -2,15 +2,19 @@ package ru.job4j.ex;
 
 public class FactorialRecursion {
     public static int calc(int n) {
-        if (n == 1 || n == 1) {
-            return 1;
+        int result = n;
+        if (n == 1 || n == 0) {
+            result = 1;
         } else {
-            return calc(n - 1) * n;
+            for (int i = n - 1; i >= 1; i--) {
+                result *= i;
+            }
         }
+        return result;
     }
 
     public static void main(String[] args) {
-        int result = calc(3);
+        int result = calc(0);
         System.out.println(result);
     }
 }
